@@ -31,8 +31,9 @@ function editarTarefa(id, novoTitulo, novaDescricao){
 function excluirTarefa (id){
     // Exclui uma tarefa da lista a partir de um ID passado. 
     // Por conta dos ids começarem a partir do número um e ele reomver pelo índice (começa no zero), é feita a subtração do id - 1
-    if (buscarPorId(id) != undefined){
-        listaTarefas.splice(id - 1, 1)
+    const index = listaTarefas.indexOf(buscarPorId(id))
+    if (index!=-1) {
+        listaTarefas.splice(index, 1)
     }else{
         throw new ReferenceError("Não foi possível excluir a tarefa pois ela não existe!")
     } 

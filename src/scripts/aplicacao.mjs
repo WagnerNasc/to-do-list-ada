@@ -20,7 +20,17 @@ exibirTarefas()
 
 console.log("---------------------------------------------")
 
-excluirTarefa(1)
+excluirTarefa(2)
+exibirTarefas()
+
+console.log("---------------------------------------------")
+
+adicionaTarefa("Correr", "Correr todo dia as 17:00")
+exibirTarefas()
+
+console.log("---------------------------------------------")
+
+excluirTarefa(3)
 exibirTarefas()
 
 console.log("---------------------------------------------")
