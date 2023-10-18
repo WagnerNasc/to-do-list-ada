@@ -1,0 +1,13 @@
+{
+  "name": "projetogrupomeu",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "aplicacao.js",
+  "scripts": {
+    "start": "node seu_arquivo_principal.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
