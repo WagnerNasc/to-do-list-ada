@@ -21,10 +21,16 @@ function buscarPorId(id){
 
 function editarTarefa(id, novoTitulo, novaDescricao){
     // Permite alterar uma determinada tarefa com base no ID passado por parâmetro
+
     const index = listaTarefas.indexOf(buscarPorId(id))
     if (index!=-1) {
-        listaTarefas[index].titulo=novoTitulo
-        listaTarefas[index].descricao=novaDescricao
+
+        if (novoTitulo !== "" || novoTitulo !== null){
+            listaTarefas[index].titulo=novoTitulo
+        }
+        if (novaDescricao !== "" || novaDescricao !== null){
+            listaTarefas[index].descricao=novaDescricao
+        }   
     }
 }
 

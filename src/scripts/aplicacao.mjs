@@ -37,3 +37,21 @@ console.log("---------------------------------------------")
 
 adicionaTarefa("Jogar video-game", "Jogar todo final de semana")
 exibirTarefas()
+
+console.log("---------------------------------------------")
+
+editarTarefa(1, "", "")
+
+exibirTarefas()
+
+console.log("---------------------------------------------")
+
+editarTarefa(1, "deitar", "")
+
+exibirTarefas()
+
+console.log("---------------------------------------------")
+
+editarTarefa(1, "", "pular")
+
+exibirTarefas()
