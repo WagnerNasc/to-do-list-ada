@@ -1,0 +1,114 @@
+body{
+    display: flex;
+    align-items: center;
+    background-color: #f0ffff;
+    height: 100vh;
+    position: relative;
+    justify-content: center;
+}
+h1{
+    padding: 1rem;
+}
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 50%;
+    margin: 1rem;
+    box-shadow: 0 0 .5rem #008b8b;
+    padding: 1rem;
+}
+.add__container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px;
+    border-radius: 5px;
+    background-color: #008b8b;
+}
+
+.add__container input{
+    
+    border: none;
+    min-width: 40%;
+    font-size: 1.2rem;
+    padding: .2rem;
+    text-align: center;
+    border-radius: 5px;
+    margin-right: 1rem;
+}
+
+#button-add{
+    background-color: #f0ffff;
+    box-shadow: 0 0 .3rem #008b8b;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    border: none;
+    color: #015a5a;
+    border-radius: 5px;
+    padding: .1rem .9rem;
+}
+
+#button-add:hover{
+    background-color: #ffd700;
+}
+
+.filter-remove-button{
+    display: flex;
+    width: 100%;
+    margin-top: .5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.remove-all{
+    background-color: #f82424;
+    box-shadow: 0 0 .3rem #a71111;
+    color: #f0ffff;
+    font-weight: bolder;
+    border: none;
+    border-radius: 5px;
+    padding: .5rem 1rem;
+    margin-left: 1rem;
+}
+#label__filter{
+    background-color: #008b8b;
+    box-shadow: 0 0 .3rem #015a5a;
+    color: #f0ffff;
+    font-weight: bolder;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+}
+#menu__filter{
+    display: none;
+}
+.menu__option{
+    background-color: #008b8b;
+    box-shadow: 0 0 .3rem #015a5a;
+    color: #f0ffff;
+    font-weight: bolder;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    margin: .3rem;
+    text-decoration: none;
+}
+table{
+    width: 100%;
+    margin: .5rem;
+    border-spacing: 0cap;
+}
+thead {
+    background-color: #cecccc;
+    
+}
+th{
+    padding: .5rem 1rem;
+    font-size: 1rem;
+}

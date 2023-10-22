@@ -1,6 +1,6 @@
 import { Tarefa } from './tarefa.mjs';
 
-let listaTarefas = []
+const listaTarefas = []
 
 function adicionaTarefa(titulo, descricao){
     // Adiciona uma nova tarefa na lista de tarefas
@@ -17,6 +17,10 @@ function buscarPorId(id){
     }else {
         throw new ReferenceError("Tarefa não encontrada!")
     }
+}
+
+function buscarTodos(){
+    return listaTarefas
 }
 
 function editarTarefa(id, novoTitulo, novaDescricao){
@@ -52,4 +56,4 @@ function exibirTarefas(){
     });
 }
 
-export { adicionaTarefa, buscarPorId, editarTarefa, excluirTarefa, exibirTarefas };
+export { adicionaTarefa, buscarPorId, buscarTodos, editarTarefa, excluirTarefa, exibirTarefas };
