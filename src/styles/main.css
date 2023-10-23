@@ -87,7 +87,8 @@ h1{
     border-radius: 5px;
 }
 #menu__filter{
-    display: none;
+    padding: .2rem;
+    background-color: #f0ffff;
 }
 .menu__option{
     background-color: #008b8b;
@@ -118,6 +119,9 @@ td{
 }
 .oculto{
     display: none;
+}
+.exibir{
+    display: flex;
 }
 .editar, .salvar, .remover{
     color: #f0ffff;

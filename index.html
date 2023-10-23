@@ -19,12 +19,12 @@
             <button id="button-add" onclick="adicionarTarefa()">+</button>
         </div>
         <div class="filter-remove-button">
-            <div class="filter">
-                <label tabindex="0" id="label__filter"> Filtro</label>
-                <ul tabindex="0" id="menu__filter">
-                    <li class="menu__option"><a id="filter-all">Todos</a></li>
-                    <li class="menu__option"><a id="filter-pending">Pendentes</a></li>
-                    <li class="menu__option"><a id="filter-completed">Concluídos</a></li>
+            <div class="filter" onclick="showMenu()">
+                <span id="label__filter"> Filtro</span>
+                <ul id="menu__filter" class="oculto">
+                    <li class="menu__option" onclick="filtrarTabela('all')" id="filter-all">Todos</li>
+                    <li class="menu__option" onclick="filtrarTabela('pending')" id="filter-pending">Pendentes</li>
+                    <li class="menu__option" onclick="filtrarTabela('completed')" id="filter-completed">Concluídos</li>
                 </ul>
             </div>
             <button class="remove-all" id="remove-all" onclick="removerTodasTarefas()">Apagar Tudo</button>

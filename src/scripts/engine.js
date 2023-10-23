@@ -16,9 +16,8 @@ const state = {
     action:{
         buttonAdd:document.getElementById("button-add"),
         buttonRemoveAll:document.getElementById("remove-all"),
-        filterAll:document.getElementById("filter-all"),
-        filterPending:document.getElementById("filter-pending"),
-        filterCompleted:document.getElementById("filter-completed"),
+        filterLabel:document.getElementById("label__filter"),
+        menuFilter:document.getElementById("menu__filter"),
     }
 
 }
@@ -36,8 +35,19 @@ function updateTarefa(id,titulo,descricao){
     state.listaDeTarefas[index].descricao = descricao
 }
 
+async function showMenu(){
+    state.action.filterLabel.classList.remove("exibir")
+    state.action.filterLabel.classList.add("oculto")
+    state.action.menuFilter.classList.remove("oculto")
+    state.action.menuFilter.classList.add("exibir")
 
-
+}
+async function hideMenu(){
+    state.action.filterLabel.classList.remove("oculto")
+    state.action.filterLabel.classList.add("exibir")
+    state.action.menuFilter.classList.remove("exibir")
+    state.action.menuFilter.classList.add("oculto")
+}
 function adicionarTarefa(){
     // cria a nova tarefa e adiciona a lista de tarefas
     const tarefaNova = {
@@ -109,14 +119,30 @@ function salvarTarefa(id){
     console.log(state.listaDeTarefas);
 }
 
-function alterarStatosTarefa(){
+async function filtrarTabela(filter){
     
+    state.tabela.tarefas.innerHTML=""
+    hideMenu()
+    switch(filter){
+        case 'all':{
+            listarTarefas(state.listaDeTarefas)
+            break
+        }
+        case 'pending':{
+            listarTarefas(state.listaDeTarefas.filter(t=>t.estaCompleta==false))
+            break
+        }
+        case 'completed':{
+            listarTarefas(state.listaDeTarefas.filter(t=>t.estaCompleta==true))
+            break
+        }
+    }
 }
 
-function listarTarefas(){
+function listarTarefas(lista){
     // criar uma linha na tabela para cada tarefa na lista de tarefas
-    if (state.listaDeTarefas!=[]){
-        state.listaDeTarefas.forEach(tarefa=>criarLinhaNaTabela(tarefa))
+    if (lista!=[]){
+        lista.forEach(tarefa=>criarLinhaNaTabela(tarefa))
     }
 }
 
@@ -150,7 +176,7 @@ function updateStatus(id){
 }
 
 function init(){
-    listarTarefas()
+    listarTarefas(state.listaDeTarefas)
 }
 
 init()
