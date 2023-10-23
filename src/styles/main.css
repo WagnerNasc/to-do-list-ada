@@ -102,7 +102,6 @@ h1{
 table{
     width: 100%;
     margin: .5rem;
-    border-spacing: 0cap;
 }
 thead {
     background-color: #cecccc;
@@ -111,4 +110,32 @@ thead {
 th{
     padding: .5rem 1rem;
     font-size: 1rem;
+}
+td{
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    border:1px solid #cecccc;
+}
+.oculto{
+    display: none;
+}
+.editar, .salvar, .remover{
+    color: #f0ffff;
+    font-weight: bolder;
+    border: none;
+    border-radius: 5px;
+    padding: .3rem .5rem;
+    margin-left: .5rem;
+}
+.editar{
+    background-color: #ffd700;
+    box-shadow: 0 0 .3rem #d4b501;
+}
+.salvar{
+    background-color: #008b8b;
+    box-shadow: 0 0 .3rem #015a5a;
+}
+.remover{
+    background-color: #f82424;
+    box-shadow: 0 0 .3rem #a71111;
 }

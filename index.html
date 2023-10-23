@@ -16,7 +16,7 @@
         <div class="add__container">
             <input type="text" placeholder="Titulo da nova tarefa" id="title-add">
             <input type="text" placeholder="Descrição da tarefa" id="description-add">
-            <button id="button-add">+</button>
+            <button id="button-add" onclick="adicionarTarefa()">+</button>
         </div>
         <div class="filter-remove-button">
             <div class="filter">
@@ -27,7 +27,7 @@
                     <li class="menu__option"><a id="filter-completed">Concluídos</a></li>
                 </ul>
             </div>
-            <button class="remove-all" id="remove-all">Apaga Tudo</button>
+            <button class="remove-all" id="remove-all" onclick="removerTodasTarefas()">Apagar Tudo</button>
             
         </div>
         <table class="table__container">
