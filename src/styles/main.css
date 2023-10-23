@@ -139,3 +139,29 @@ td{
     background-color: #f82424;
     box-shadow: 0 0 .3rem #a71111;
 }
+
+.linha input{
+    width: 60px;
+    height: 30px;
+    appearance: none;
+    border-radius: 30px;
+    background-color: #cecccc;
+    cursor: pointer;
+    position: relative;
+}
+.linha input::before {
+    content: "";
+    height: 20px;
+    width: 20px;
+    background-color: #803c3c;
+    top: 50%;
+    left: 0.3rem;
+    border-radius: inherit;
+    position: absolute;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+.linha input:checked::before {
+    left: 2.1rem;
+    background-color: #008b8b;
+}

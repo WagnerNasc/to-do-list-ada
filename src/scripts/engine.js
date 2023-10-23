@@ -1,5 +1,3 @@
-
-
 const state = {
     listaDeTarefas: [{
         id:0,
@@ -131,9 +129,10 @@ function criarLinhaNaTabela(tarefa){
     // cria uma linha na tabela com o id da tarefa
     const linha = document.createElement("tr")
     linha.setAttribute("id", tarefa.id)
-    const status = tarefa.estaCompleta?"Concluído":"Pendente"
+    linha.setAttribute("class","linha")
+    const status = tarefa.estaCompleta?"checked":""
     // cria cada celula da linhas com os campos da tarefa com o id da tarefa no final de cada id da celula 
-    linha.innerHTML = ` <td id = "${statusId}"> ${status} </td>
+    linha.innerHTML = ` <td id = "${statusId}"> <input type="checkbox" onclick="updateStatus(${tarefa.id})" ${status}></td>
                         <td id = "${titleId}">${tarefa.titulo}</td>
                         <td id = "${descriptionId}">${tarefa.descricao}</td>
                         <td>
@@ -143,6 +142,11 @@ function criarLinhaNaTabela(tarefa){
                         </td>`
     // adiciona a linha criada na tabela
     state.tabela.tarefas.appendChild(linha)
+}
+function updateStatus(id){
+    const index = buscarIndexPorId(id)
+    state.listaDeTarefas[index].estaCompleta = !state.listaDeTarefas[index].estaCompleta
+    console.log(state.listaDeTarefas[index]);
 }
 
 function init(){
