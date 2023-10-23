@@ -87,8 +87,11 @@ h1{
     border-radius: 5px;
 }
 #menu__filter{
+    position: absolute;
+    z-index: 99;
     padding: .2rem;
     background-color: #f0ffff;
+    text-decoration: none;
 }
 .menu__option{
     background-color: #008b8b;

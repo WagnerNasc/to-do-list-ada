@@ -40,6 +40,7 @@ async function showMenu(){
     state.action.filterLabel.classList.add("oculto")
     state.action.menuFilter.classList.remove("oculto")
     state.action.menuFilter.classList.add("exibir")
+    console.log("aqui")
 
 }
 async function hideMenu(){
