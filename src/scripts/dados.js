@@ -1,13 +1,12 @@
-import { Tarefa } from './tarefa.mjs';
 
 const listaTarefas = []
 
-function adicionaTarefa(titulo, descricao){
+function criarNovaTarefa(titulo, descricao){
     // Adiciona uma nova tarefa na lista de tarefas
     const tarefa = new Tarefa(titulo, descricao);
     listaTarefas.push(tarefa)
 
-    return tarefa.id
+    return tarefa
 }
     
 function buscarPorId(id){
@@ -38,6 +37,13 @@ function editarTarefa(id, novoTitulo, novaDescricao){
     }
 }
 
+function editarStatusTarefa(id){
+    const index = listaTarefas.indexOf(buscarPorId(id))
+    if(index!=-1){
+        listaTarefas[index].estaCompleta = !listaTarefas[index].estaCompleta
+    }
+}
+
 function excluirTarefa (id){
     // Exclui uma tarefa da lista a partir de um ID passado. 
     // Por conta dos ids começarem a partir do número um e ele reomver pelo índice (começa no zero), é feita a subtração do id - 1
@@ -49,11 +55,14 @@ function excluirTarefa (id){
     } 
 }
 
+function excluirTodasTarefas(){
+    if (listaTarefas!=[])
+        listaTarefas.splice(0,listaTarefas.length)
+}
+
 function exibirTarefas(){
     // Exibe todas as tarefas dentro da lista
     listaTarefas.forEach(tarefa => {
         console.log(tarefa)
     });
 }
-
-export { adicionaTarefa, buscarPorId, buscarTodos, editarTarefa, excluirTarefa, exibirTarefas };
